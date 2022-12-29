@@ -1,8 +1,8 @@
-let num_first = parseInt(prompt("첫 번째 숫자"));
-let num_second = parseInt(prompt("두 번째 숫자"));
+const num_first = parseInt(prompt("첫 번째 숫자"));
+const num_second = parseInt(prompt("두 번째 숫자"));
 
-let smaller = num_first<num_second ? num_first : num_second;
-let bigger = num_first>num_second ? num_first : num_second;
+const smaller = num_first<num_second ? num_first : num_second;
+const bigger = num_first>num_second ? num_first : num_second;
 let max;
 
 for(i=0; i <= smaller; i++){

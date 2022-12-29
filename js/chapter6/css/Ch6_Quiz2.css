@@ -23,7 +23,7 @@ button {
 }
 
 button.active {
-  transform:translateX(-110px);
+  transform:translateX(-130px);
 
 }
 nav {

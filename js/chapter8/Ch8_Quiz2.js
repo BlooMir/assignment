@@ -14,7 +14,7 @@ btn.addEventListener("click", (e) => {
     result.innerText = "당첨자 : ";
 
     prizePeople.forEach(function(value){
-        result.innerText += " " + value + "번";
+        result.innerText += " " + value + "번,";
     });
     console.log(prizePeople);
     e.preventDefault();

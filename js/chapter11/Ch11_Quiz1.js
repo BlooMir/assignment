@@ -1,4 +1,3 @@
-const lectMembers_NoYoo = ["Kim", "Son", "Lee", "Lee"];
 const lectMembers = ["Yoo", "Kim", "Son", "Lee", "Lee"];
 
 class Lecture {
@@ -9,20 +8,24 @@ class Lecture {
   }
 }
 
-const lectureInfoF = new Lecture(false, "L001", lectMembers_NoYoo);
+const lectureInfoF = new Lecture(false, "L001", lectMembers);
 const lectureInfoT = new Lecture(true, "L002", lectMembers);
 
 function getStudent(instance){
-  let {isTutor, lectID, members} = instance;
+  let {hasTutor, lectID, members} = instance;
+  let tutor,student;
 
-  if(isTutor === true){
-    let [tutor, ...student] = members;
-    console.log(`강의 : ${lectID}, 수강생 : ${tutor} ${members}`);
-  }
-  else{
-    let student = members;
-    console.log(`강의 : ${lectID}, 수강생 : ${members}`);
-  }
+  hasTutor ? [tutor, ...student] = members : student = members; 
+  console.log(`강의 : ${lectID}, 강의자 : ${tutor}, 수강생 : ${student}`);
+
+  // if(isTutor === true){
+  //   let [tutor, ...student] = members; 
+  //   console.log(`강의 : ${lectID}, 강의자 : ${tutor}, 수강생 : ${student}`);
+  // }
+  // else{
+  //   let student = members;
+  //   console.log(`강의 : ${lectID}, 수강생 : ${student}`);
+  // }
 };
 
 getStudent(lectureInfoF);

@@ -1,7 +1,7 @@
 const noticeBox = document.querySelector("#noti-box");
 const btn = document.querySelector("#bttn");
 
-btn.addEventListener("click", (e) => {
+btn.addEventListener("click", () => {
     const popUp = document.createElement("div");
     popUp.innerText = '알림 영역 생성';
 
